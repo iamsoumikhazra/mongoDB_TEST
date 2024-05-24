@@ -18,7 +18,7 @@ const User = mongoose.model("Users", {
   password: String,
 });
 
-app.post("/signup", (req, res) => {
+app.post("/signup", async(req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const name = req.body.name;
